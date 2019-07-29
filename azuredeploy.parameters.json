@@ -6,7 +6,13 @@
       "value": "dc95sofs"
     },
     "existingDomainName": {
-      "value": "sfdc"
+      "value": "sf.priv"
+    },
+    "existingDomainNetbiosName": {
+      "value": "SFDC"
+    },
+    "existingOuName": {
+      "value": "pc095-infra"
     },
     "adminUsername": {
       "value": "i509422"

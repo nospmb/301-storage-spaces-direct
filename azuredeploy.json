@@ -63,6 +63,18 @@
         "description": "DNS domain name for existing Active Directory domain"
       }
     },
+    "existingDomainNetbiosName": {
+      "type": "string",
+      "metadata": {
+        "description": "NetBIOS domain name for existing Active Directory domain"
+      }
+    },
+    "existingOuName": {
+      "type": "string",
+      "metadata": {
+        "description": "Org Unit name to add the cluster nodes to"
+      }
+    },
     "adminUsername": {
       "type": "string",
       "metadata": {
@@ -120,7 +132,7 @@
       "metadata": {
         "description": "The sasToken required to access _artifactsLocation.  When the template is deployed using the accompanying scripts, a sasToken will be automatically generated."
       },
-      "defaultValue": ""
+      "defaultValue": "?sv=2018-03-28&ss=bfqt&srt=sco&sp=rwdlacup&se=2019-07-27T15:16:47Z&st=2019-07-27T07:16:47Z&spr=https&sig=giliql9cTBNIAMccYPUtnlLFfDvHoayENkhsb4MIMUA%3D"
     }
   },
   "variables": {
@@ -146,6 +158,12 @@
           },
           "domainName": {
             "value": "[parameters('existingDomainName')]"
+          },
+          "DomainNetbiosName": {
+            "value": "[parameters('existingDomainNetbiosName')]"
+          },
+          "OuName": {
+            "value": "[parameters('existingOuName')]"
           },
           "adminUsername": {
             "value": "[parameters('adminUsername')]"
