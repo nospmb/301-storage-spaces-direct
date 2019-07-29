@@ -3,12 +3,12 @@
 Param(
     [string] [Parameter(Mandatory=$true)] $ResourceGroupLocation = "eastus",
     [string] $ResourceGroupName = 'ss95-storage-rg',
-    [switch] $UploadArtifacts = $true,
+    [switch] $UploadArtifacts,
     [string] $StorageAccountName,
     [string] $StorageContainerName = $ResourceGroupName.ToLowerInvariant() + '-stageartifacts',
     [string] $TemplateFile = 'C:\MyTemplates\test\azuredeploy.json',
     [string] $TemplateParametersFile = 'C:\MyTemplates\test\azuredeploy.parameters.json',
-    [string] $ArtifactStagingDirectory = 'C:\MyTemplates\test\301-storage-spaces-direct',
+    [string] $ArtifactStagingDirectory,
     [string] $DSCSourceFolder = 'DSC',
     [switch] $ValidateOnly
 )
